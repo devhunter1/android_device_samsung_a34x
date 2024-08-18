@@ -1,0 +1,25 @@
+# mount point	fstype		device			device2			flags
+/system_image		emmc	/dev/block/mapper/system		flags=backup=0;flashimg;display="System Image"
+/vendor_image		emmc	/dev/block/mapper/vendor		flags=backup=0;flashimg;display="Vendor Image"
+/product_image		emmc	/dev/block/mapper/product		flags=backup=0;flashimg;display="Product Image"
+/odm_image		emmc	/dev/block/mapper/odm		flags=backup=0;flashimg;display="Odm Image"
+/system_ext_image	emmc	/dev/block/mapper/system_ext	flags=backup=0;flashimg;display="System_EXT Image"
+/vendor_dlkm_image	emmc	/dev/block/mapper/vendor_dlkm	flags=backup=0;flashimg;display="Vendor_DLKM Image"
+
+# physical partitions for backup and flashing
+/metadata	ext4		/dev/block/by-name/metadata		flags=backup=1;wipeingui;display="Metadata"
+/boot		emmc		/dev/block/by-name/boot		flags=backup=1;flashimg;display="Boot"
+/recovery	emmc		/dev/block/by-name/recovery		flags=backup=1;flashimg;display="Recovery"
+/data		f2fs		/dev/block/by-name/userdata		flags=length=-20480
+/efs		ext4		/dev/block/by-name/efs		flags=backup=1;display="EFS"
+/sec_efs	ext4		/dev/block/by-name/sec_efs		flags=backup=1;display="Sec EFS"
+/modem		emmc		/dev/block/by-name/radio		flags=backup=1;display="Modem"
+/dtbo		emmc		/dev/block/by-name/dtbo		flags=backup=1;flashimg;display="Dtbo"
+/cp_debug	emmc		/dev/block/by-name/cp_debug		flags=backup=1;display="CP Debug"
+/up_param	emmc		/dev/block/by-name/up_param		flags=backup=1;display="Param"
+/optics_image	emmc		/dev/block/by-name/optics		flags=backup=1;flashimg;display="Optics Image"
+/prism_image	emmc		/dev/block/by-name/prism		flags=backup=1;flashimg;display="Prism Image"
+/vbmeta_system	emmc		/dev/block/by-name/vbmeta_system
+/init_boot	emmc            /dev/block/by-name/init_boot		flags=backup=1;flashimg;display="Init Boot"
+/vendor_boot	emmc		/dev/block/by-name/vendor_boot	flags=backup=1;flashimg;display="Vendor Boot"
+/vbmeta_samsung	emmc		/dev/block/by-name/vbmeta_samsung
