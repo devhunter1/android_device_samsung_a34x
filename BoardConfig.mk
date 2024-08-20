@@ -87,7 +87,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # System as root
-BOARD_ROOT_EXTRA_FOLDERS := carrier data_mirror debug_ramdisk efs linkerconfig metadata odm_dlkm oem optics postinstall prism second_stage_resources spu system_ext vendor_dlkm system_dlkm
+BOARD_ROOT_EXTRA_FOLDERS := carrier data_mirror debug_ramdisk efs linkerconfig metadata oem optics postinstall prism second_stage_resources spu system_ext
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Security patch level
@@ -114,20 +114,20 @@ BOARD_USES_METADATA_PARTITION := true
 # TWRP Configuration
 TW_DEVICE_VERSION := Galaxy A34 5G
 TWRP_EVENT_LOGGING := true
-TW_INCLUDE_LPTOOLS := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 TW_SCREEN_BLANK_ON_BOOT := true
-TW_FRAMERATE := 90
-TW_EXCLUDE_APEX := true
+TW_FRAMERATE := 120
 TW_NO_SCREEN_BLANK := true
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
 TW_MAX_BRIGHTNESS := 700
 TW_DEFAULT_BRIGHTNESS := 300
+TW_INCLUDE_LPDUMP := true
+TW_INCLUDE_LPTOOLS := true
 TW_Y_OFFSET := 80
 TW_H_OFFSET := -80
 TW_NO_REBOOT_BOOTLOADER := true
