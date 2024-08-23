@@ -1,0 +1,58 @@
+#!/system/bin/sh
+#
+# Samsung Galaxy A34 
+#
+
+R_LOG="/tmp/recovery.log"
+
+# write recovery logs
+function w_log()
+{
+    local LOGTAG="${1}"
+
+    [ -z ${2} ] && return 1
+
+    echo "${1}:${0}:${2}" | tee -a ${R_LOG}
+}
+
+# a simple method for accessing the file/directory :)
+function access()
+{
+    if [ -f "${1}" ] || [ -d "${1}" ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+if access "/system/bin/multidisabler" || access "/sbin/multidisabler"; then
+    w_log "I" "Multidisabler found. Ready."
+else
+    w_log "E" "Multidisabler not found!"
+    exit 1
+fi
+
+if access "/data/local"; then
+    w_log "I" "Storage is not encrypted."
+    exit 0
+else
+    w_log "W" "Storage is encrypted!"
+    w_log "I" "Formatting data..."
+
+    if twrp format data; then
+        w_log "I" "Data has been formatted successfully"
+    else
+        w_log "E" "Formatting failed!"
+        exit 1
+    fi
+
+    if multidisabler; then
+        w_log "I" "Storage successfuly decrypted."
+        twrp print "${0}: please reboot device"
+    else
+        w_log "E" "The storage encryption has not been decrypted!"
+        exit 1
+    fi
+fi
+
+# end of script
