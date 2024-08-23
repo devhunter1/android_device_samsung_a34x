@@ -19,6 +19,7 @@
 /vendor_boot	emmc		/dev/block/by-name/vendor_boot	flags=backup=1;flashimg;display="Vendor Boot"
 /vbmeta_samsung	emmc		/dev/block/by-name/vbmeta_samsung
 /cache		ext4		/dev/block/by-name/cache		flags=backup=1;display="Cache"
+/storage		f2fs		/data/media/0							flags=display="Internal Storage";backup=1;usermrf;fsflags="bind";removable
 
 # other partitions
 /tee1		   emmc	       /dev/block/by-name/tee1	         flags=display="TEE1";backup=1
