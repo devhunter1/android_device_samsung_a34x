@@ -1,0 +1,9 @@
+on property:sys.boot_completed=1
+    start multidisabler-helper
+
+service multidisabler-helper /system/bin/multidisabler-helper
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
