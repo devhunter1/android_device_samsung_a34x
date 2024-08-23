@@ -18,6 +18,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
+
+PRODUCT_PACKAGES += shrink
+
+# TWRP TZData
+PRODUCT_PACKAGES_ENG += \
+    tzdata_twrp
+
+# EROFS Tools
+PRODUCT_HOST_PACKAGES_ENG += \
+    liberofs \
+    mkfs.erofs \
+    make_erofs \
+    dump.erofs \
+    fsck.erofs
     
 # MTK plpath utils
 PRODUCT_PACKAGES += \
