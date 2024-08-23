@@ -32,6 +32,9 @@ PRODUCT_HOST_PACKAGES_ENG += \
     make_erofs \
     dump.erofs \
     fsck.erofs
+
+PRODUCT_PACKAGES += \
+    advanced_format_package
     
 # MTK plpath utils
 PRODUCT_PACKAGES += \
