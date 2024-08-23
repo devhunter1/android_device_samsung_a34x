@@ -1,9 +1,9 @@
 # mount point	fstype		device			device2			flags
-/system_image		emmc	/dev/block/mapper/system		flags=backup=0;flashimg;display="System Image"
-/vendor_image		emmc	/dev/block/mapper/vendor		flags=backup=0;flashimg;display="Vendor Image"
-/product_image		emmc	/dev/block/mapper/product		flags=backup=0;flashimg;display="Product Image"
-/odm_image		emmc	/dev/block/mapper/odm		flags=backup=0;flashimg;display="Odm Image"
-/system_ext_image	emmc	/dev/block/mapper/system_ext	flags=backup=0;flashimg;display="System_EXT Image"
+/system_image		emmc	/dev/block/mapper/system		flags=display="System Image";backup=1;flashimg=1;logical
+/vendor_image		emmc	/dev/block/mapper/vendor		flags=display="Vendor Image";backup=1;flashimg=1;logical
+/product_image		emmc	/dev/block/mapper/product		flags=display="Product Image";backup=1;flashimg=1;logical
+/odm_image		emmc	/dev/block/mapper/odm		flags=display="ODM Image";backup=1;flashimg=1;logical
+/system_ext_image	emmc	/dev/block/mapper/system_ext	flags=display="System EXT Image";backup=1;flashimg=1;logical
 
 # physical partitions for backup and flashing
 /metadata	ext4		/dev/block/by-name/metadata		flags=backup=1;wipeingui;display="Metadata"
