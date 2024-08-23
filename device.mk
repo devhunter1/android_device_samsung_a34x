@@ -37,6 +37,10 @@ PRODUCT_HOST_PACKAGES_ENG += \
 PRODUCT_PACKAGES += \
     mtk_plpath_utils \
     mtk_plpath_utils.recovery
+
+# Flashlight
+PRODUCT_PACKAGES += \
+    flashlight  # Menambahkan flashlight ke dalam produk build
     
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
