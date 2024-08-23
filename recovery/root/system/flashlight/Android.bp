@@ -1,7 +1,5 @@
 prebuilt_etc {
-    name: "flashlight_files",
-    src: ["brightness", "max_brightness"],
-    tag: "recovery",
-    path: "system/flashlight/",
-    subdir: "recovery/root/system/flashlight/",
+    name: "flashlight",
+    src: ["flashlight/brightness", "flashlight/max_brightness"],
+    installable: true,
 }
