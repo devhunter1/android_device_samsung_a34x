@@ -1,5 +1,0 @@
-prebuilt_etc {
-    name: "flashlight",
-    src: ["flashlight/brightness", "flashlight/max_brightness"],
-    installable: true,
-}
