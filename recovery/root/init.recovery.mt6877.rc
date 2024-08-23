@@ -35,3 +35,13 @@ on post-fs
     symlink /dev/block/mapper/pl_b /dev/block/by-name/preloader_raw_b
     symlink /dev/block/mapper/pl_a /dev/block/platform/bootdevice/by-name/preloader_raw_a
     symlink /dev/block/mapper/pl_b /dev/block/platform/bootdevice/by-name/preloader_raw_b
+
+    # Menambahkan kontrol flashlight
+    mkdir /system/flashlight 0777 system system
+    write /system/flashlight/flashlight 0
+    chmod 0666 /system/flashlight/flashlight
+    chown system system /system/flashlight/flashlight
+
+on property:sys.flashlight=*
+    chmod 0666 /sys/devices/virtual/camera/flash/rear_flash
+    write /sys/devices/virtual/camera/flash/rear_flash $(cat /system/flashlight/flashlight)
