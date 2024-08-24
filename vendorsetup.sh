@@ -39,18 +39,9 @@ fi
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export ALLOW_MISSING_DEPENDENCIES="true"
         export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
-        export FOX_VANILLA_BUILD="1"
         export FOX_ENABLE_APP_MANAGER=1
-        export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
-        export OF_USE_LZMA_COMPRESSION=1
         export OF_SCREEN_H="2340"
-        export OF_STATUS_H="140"
-        export OF_STATUS_INDENT_LEFT="48"
-        export OF_STATUS_INDENT_RIGHT="48"
-        export OF_USE_MAGISKBOOT="1"
-        export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES="1"
         export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
-        export OF_SKIP_MULTIUSER_FOLDERS_BACKUP="1"
         export LC_ALL="C"
         export FOX_USE_NANO_EDITOR="1"
         export FOX_DELETE_AROMAFM="1"
@@ -60,7 +51,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_USE_XZ_UTILS="1"
         export FOX_VARIANT="A14"
         export OF_MAINTAINER="xnnnsets"
-        export FOX_BUILD_TYPE="Anumu"
+        export FOX_BUILD_TYPE="Unstable"
         export FOX_VERSION="R12.1"
         export OF_FL_PATH1="/tmp/flashlight" # See /*.rc for more information
 fi
