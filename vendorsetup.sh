@@ -57,10 +57,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
         export FOX_USE_XZ_UTILS="1"
         export FOX_VARIANT="A14"
-        export OF_MAINTAINER="KONTOL"
-        export FOX_BUILD_TYPE="Stable"
+        export OF_MAINTAINER="xnnnsets"
+        export FOX_BUILD_TYPE="Anumu"
         export FOX_VERSION="R12.1"
         export OF_FL_PATH1="/tmp/flashlight" # See /*.rc for more information
-        export FOX_DELETE_MAGISK_ADDON="1"
-        export OF_USE_GREEN_LED="0"
 fi
