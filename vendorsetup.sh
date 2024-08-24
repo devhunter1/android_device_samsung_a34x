@@ -19,6 +19,7 @@
 # 	Please maintain this if you use this script or any part of it
 #
 FDEVICE="a34x"
+export FOX_BUILD_DEVICE="a34x"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep -w \"$FDEVICE\")
