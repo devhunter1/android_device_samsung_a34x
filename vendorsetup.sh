@@ -42,6 +42,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export FOX_VANILLA_BUILD="1"
         export FOX_ENABLE_APP_MANAGER=1
         export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
+        export OF_USE_LZMA_COMPRESSION=1
         export OF_SCREEN_H="2340"
         export OF_STATUS_H="140"
         export OF_STATUS_INDENT_LEFT="48"
