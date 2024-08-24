@@ -40,6 +40,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export ALLOW_MISSING_DEPENDENCIES="true"
         export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
         export FOX_VANILLA_BUILD="1"
+        export FOX_ENABLE_APP_MANAGER=1
         export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
         export OF_SCREEN_H="2340"
         export OF_STATUS_H="140"
