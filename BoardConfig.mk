@@ -144,12 +144,6 @@ TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-FOX_VARIANT="A14"
-OF_MAINTAINER="KONTOL"
-FOX_BUILD_TYPE="Stable"
-FOX_VERSION="R12.1"
-OF_FL_PATH1="/tmp/flashlight" # See /*.rc for more information
-FOX_DELETE_MAGISK_ADDON="1"
 
 # Battery correct percentage
 TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery/capacity
