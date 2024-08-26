@@ -1,0 +1,14 @@
+OrangeFox Recovery R12.1 Changelog
+-----------------------------------
+
+== R12.1 ==
+-- add lz4 and zstd
+-- add erofs utils
+-- add flashlight files
+-- fix temprature cpu
+
+KonTooL
+
+NOTED
+i just builder not dev
+i got device tree from @devhunter1 @YZBruh @federico
