@@ -118,7 +118,7 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 TW_SCREEN_BLANK_ON_BOOT := true
-TW_FRAMERATE := 120
+TW_FRAMERATE := 90
 TW_NO_SCREEN_BLANK := true
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
@@ -144,6 +144,9 @@ TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# Ofox 
+OF_ENABLE_LPTOOLS := 1
 
 # Battery correct percentage
 TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery/capacity
