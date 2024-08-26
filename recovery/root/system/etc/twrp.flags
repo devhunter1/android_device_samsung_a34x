@@ -9,7 +9,6 @@
 /metadata	ext4		/dev/block/by-name/metadata		flags=backup=1;wipeingui;display="Metadata"
 /boot		emmc		/dev/block/by-name/boot		flags=backup=1;flashimg;display="Boot"
 /recovery	emmc		/dev/block/by-name/recovery		flags=backup=1;flashimg;display="Recovery"
-/data		f2fs		/dev/block/by-name/userdata		flags=length=-20480
 /dtbo		emmc		/dev/block/by-name/dtbo		flags=backup=1;flashimg;display="Dtbo"
 /up_param	emmc		/dev/block/by-name/up_param		flags=backup=1;display="Param"
 /optics_image	emmc		/dev/block/by-name/optics		flags=backup=1;flashimg;display="Optics Image"
