@@ -1,24 +1,24 @@
 # mount point	fstype		device			device2			flags
-/system_image		emmc	/dev/block/mapper/system		flags=backup=0;flashimg;display="System Image"
-/vendor_image		emmc	/dev/block/mapper/vendor		flags=backup=0;flashimg;display="Vendor Image"
-/product_image		emmc	/dev/block/mapper/product		flags=backup=0;flashimg;display="Product Image"
-/odm_image		emmc	/dev/block/mapper/odm		flags=backup=0;flashimg;display="Odm Image"
-/system_ext_image	emmc	/dev/block/mapper/system_ext	flags=backup=0;flashimg;display="System_EXT Image"
+/system_image		emmc	/dev/block/mapper/system		flags=display="System Image";backup=1;flashimg=1;logical;wipeingui
+/vendor_image		emmc	/dev/block/mapper/vendor		flags=display="Vendor Image";backup=1;flashimg=1;logical;wipeingui
+/product_image		emmc	/dev/block/mapper/product		flags=display="Product Image";backup=1;flashimg=1;logical;wipeingui
+/odm_image		emmc	/dev/block/mapper/odm		flags=display="ODM Image";backup=1;flashimg=1;logical;wipeingui
+/system_ext_image	emmc	/dev/block/mapper/system_ext	flags=display="System EXT Image";backup=1;flashimg=1;logical;wipeingui
 
 # physical partitions for backup and flashing
 /metadata	ext4		/dev/block/by-name/metadata		flags=backup=1;wipeingui;display="Metadata"
 /boot		emmc		/dev/block/by-name/boot		flags=backup=1;flashimg;display="Boot"
 /recovery	emmc		/dev/block/by-name/recovery		flags=backup=1;flashimg;display="Recovery"
-/data		f2fs		/dev/block/by-name/userdata		flags=length=-20480
 /dtbo		emmc		/dev/block/by-name/dtbo		flags=backup=1;flashimg;display="Dtbo"
-/up_param	emmc		/dev/block/by-name/up_param		flags=backup=1;display="Param"
-/optics_image	emmc		/dev/block/by-name/optics		flags=backup=1;flashimg;display="Optics Image"
-/prism_image	emmc		/dev/block/by-name/prism		flags=backup=1;flashimg;display="Prism Image"
+/up_param	emmc		/dev/block/by-name/up_param		flags=backup=1;display="Param";wipeingui
+/optics_image	emmc		/dev/block/by-name/optics		flags=backup=1;flashimg;display="Optics Image";wipeingui
+/prism_image	emmc		/dev/block/by-name/prism		flags=backup=1;flashimg;display="Prism Image";wipeingui
 /vbmeta_system	emmc		/dev/block/by-name/vbmeta_system
 /init_boot	emmc            /dev/block/by-name/init_boot		flags=backup=1;flashimg;display="Init Boot"
 /vendor_boot	emmc		/dev/block/by-name/vendor_boot	flags=backup=1;flashimg;display="Vendor Boot"
 /vbmeta_samsung	emmc		/dev/block/by-name/vbmeta_samsung
 /cache		ext4		/dev/block/by-name/cache		flags=backup=1;display="Cache"
+/storage		f2fs		/data/media/0							flags=display="Internal Storage";backup=1;usermrf;fsflags="bind";removable
 
 # other partitions
 /tee1		   emmc	       /dev/block/by-name/tee1	         flags=display="TEE1";backup=1
@@ -36,7 +36,7 @@
 /tzar		   emmc	       /dev/block/by-name/tzar	         flags=display="TZAR";backup=1
 /uh                emmc        /dev/block/by-name/uh                 flags=display="UH";backup=1;flashimg=1
 /pi_img            emmc        /dev/block/by-name/pi_img             flags=display="PI_IMG";backup=1;flashimg=1
-/optics            ext4        /dev/block/by-name/optics             flags=display="Optics";backup=1
+/optics            ext4        /dev/block/by-name/optics             flags=display="Optics";backup=1;wipeingui
 /prism             ext4        /dev/block/by-name/prism              flags=display="Prism";backup=1
 /nvdata            ext4        /dev/block/by-name/nvdata             flags=display="NVDATA";backup=1
 /nvcfg             ext4        /dev/block/by-name/nvcfg              flags=display="NVCFG";backup=1
